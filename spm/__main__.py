@@ -1,9 +1,11 @@
 """The main entry point. Invoke as `stocks-price-monitor' or `python -m stocks-price-monitor'.
 """
+from .argparser import parse_command_line
 
 
 def main():
     try:
+        args = parse_command_line()
         print("Hello World")
     except KeyboardInterrupt:
         print("Exit")
